@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Background } from '@devmoon-libs/ui';
+	import Background from '$lib/shared/background/background.svelte';
 	import '../app.css';
 	import store, { useSelector } from '../lib/store';
 	import { authSelectors } from '$lib/auth/store/selectors';

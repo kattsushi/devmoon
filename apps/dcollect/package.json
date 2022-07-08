@@ -36,7 +36,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-formly": "^1.1.3",
-		"@devmoon-libs/ui": "*"
+		"svelte-formly": "^1.1.3"
 	}
 }
