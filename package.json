@@ -1,0 +1,40 @@
+{
+	"name": "devmoon",
+	"version": "0.0.1",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"libs/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write --plugin-search-dir=. .",
+		"prepare": "husky install",
+		"precommit": "lint-staged"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.0",
+		"@fortawesome/free-solid-svg-icons": "^6.1.1",
+		"@redux-devtools/extension": "^3.2.2",
+		"@reduxjs/toolkit": "^1.8.3",
+		"@sveltejs/adapter-vercel": "1.0.0-next.59",
+		"daisyui": "^2.18.1",
+		"gun": "^0.2020.1237",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "latest",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte-fa": "^3.0.2",
+		"turbo": "latest"
+	},
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=14.0.0"
+	},
+	"lint-staged": {
+		"*.{json,css,md,ts,html,svelte}": "pnpm format"
+	},
+	"packageManager": "pnpm@7.5.0"
+}
