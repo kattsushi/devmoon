@@ -47,6 +47,17 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
+      - uses: amondnet/vercel-action@v20
+        id: now-deployment-production
+        if: github.event_name == 'push'
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
+
       # - run: "echo \"Found deployment url: ${{ env.VERCEL_DEPLOYMENT_URL }}\""
       # - uses: amondnet/vercel-action@v20 #deploy
       #   with:
