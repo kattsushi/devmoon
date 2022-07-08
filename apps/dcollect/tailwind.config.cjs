@@ -1,14 +1,8 @@
-const typography = require('@tailwindcss/typography');
-const forms = require('@tailwindcss/forms');
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
 	theme: {
 		extend: {}
 	},
-
-	plugins: [forms, typography, require('daisyui')]
+	plugins: [require('@tailwindcss/typography'), require('daisyui')]
 };
-
-module.exports = config;
