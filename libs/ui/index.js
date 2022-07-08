@@ -1,0 +1,1 @@
+export { default as Background } from './components/background/background.svelte'

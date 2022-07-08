@@ -1,3 +1,7 @@
+<script lang="ts">
+	console.log('background.svelte');
+</script>
+
 <div class="header">
 	<!--Content before waves-->
 	<div class="inner-header flex">

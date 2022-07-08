@@ -2,7 +2,7 @@
 	"pipeline": {
 		"build": {
 			"dependsOn": ["^build"],
-			"outputs": [".svelte-kit/**", ".next/**"]
+			"outputs": [".svelte-kit/**"]
 		},
 		"lint": {
 			"outputs": []

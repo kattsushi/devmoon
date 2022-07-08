@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Breadcrumb from '$lib/shared/breadcrumb/breadcrumb.svelte';
+	import { Breadcrumb } from '@devmoon-libs/ui';
 	import { page } from '$app/stores';
 </script>
 
