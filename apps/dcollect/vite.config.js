@@ -8,8 +8,8 @@ const config = {
 			noExternal: '@devmoon-libs/ui'
 		},
 		optimizeDeps: {
-			include: ['@devmoon-libs/ui'],
-		},
+			include: ['@devmoon-libs/ui']
+		}
 	}
 };
 
