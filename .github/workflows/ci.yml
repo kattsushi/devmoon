@@ -17,13 +17,13 @@ jobs:
       TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Check out code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 2
+          fetch-depth: 1
 
       - uses: pnpm/action-setup@v2.0.1
         with:
@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -51,12 +51,3 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
-
-      # - run: "echo \"Found deployment url: ${{ env.VERCEL_DEPLOYMENT_URL }}\""
-      # - uses: amondnet/vercel-action@v20 #deploy
-      #   with:
-      #     vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-      #     github-token: ${{ secrets.GH_PAT }} #Optional
-      #     vercel-args: '--prod' #Optional
-      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} #Required
-      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
