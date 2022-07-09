@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Form from '$lib/shared/form/Form.svelte';
-	import { store, useSelector } from '$lib/store';
-	import { register } from './store';
-
+	import { Form } from '@devmoon-libs/ui';
+	import { store, useSelector, register } from '@devmoon-dcollect-libs/store';
+	import { goto } from '$app/navigation';
 	const form_name: string = 'RegiserForm';
 	const fields = [
 		{
@@ -46,7 +45,10 @@
 	function onSubmit(data: any) {
 		const { values, valid } = data;
 		if (valid) {
-			store.dispatch(register({ ...values }));
+			const then = (res: any) => {
+				goto(`/admin`, { replaceState: true });
+			};
+			store.dispatch(register({ ...values, then }));
 		}
 	}
 </script>

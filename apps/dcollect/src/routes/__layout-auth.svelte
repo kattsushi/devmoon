@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { Background } from '@devmoon-libs/ui';
 	import '../app.css';
-	import store, { useSelector } from '../lib/store';
-	import { authSelectors } from '$lib/auth/store/selectors';
+	import { store, useSelector, authSelectors, setCurrentUser } from '@devmoon-dcollect-libs/store';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { setCurrentUser } from '$lib/auth/store';
 
 	onMount(() => {
 		store.dispatch(setCurrentUser()).then(() => {

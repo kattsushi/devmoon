@@ -1,0 +1,19 @@
+{
+	"name": "@devmoon-dcollect-libs/store",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"types": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"redux": "^4.1.2",
+		"@devmoon-libs/gundb": "*",
+		"@reduxjs/toolkit": "^1.8.3",
+		"@redux-devtools/extension": "^3.2.2"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

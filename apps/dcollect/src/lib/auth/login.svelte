@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Form from '$lib/shared/form/Form.svelte';
-	import store from '$lib/store';
-	import { login } from './store/actions';
+	import { Form } from '@devmoon-libs/ui';
+	import { store, login } from '@devmoon-dcollect-libs/store';
+	import { goto } from '$app/navigation';
 	const form_name: string = 'LoginForm';
 	const fields = [
 		{
@@ -31,8 +31,11 @@
 
 	function onSubmit(data: any) {
 		const { values, valid } = data;
+		const then = (res: any) => {
+			goto(`/admin`, { replaceState: true });
+		};
 		if (valid) {
-			store.dispatch(login({ ...values, option: 'login' }));
+			store.dispatch(login({ ...values, option: 'login', then }));
 		}
 	}
 </script>

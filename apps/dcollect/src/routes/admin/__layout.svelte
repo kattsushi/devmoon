@@ -1,13 +1,11 @@
 <script lang="ts">
-	import Drawer from '$lib/shared/drawer/drawer.svelte';
+	import { Drawer } from '@devmoon-libs/ui';
 	import '../../app.css';
 
-	import store, { useSelector } from '../../lib/store';
-	import { authSelectors } from '$lib/auth/store/selectors';
+	import { store, useSelector, authSelectors, setCurrentUser } from '@devmoon-dcollect-libs/store';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { setCurrentUser } from '$lib/auth/store';
-
+	import { page } from '$app/stores';
 	onMount(() => {
 		store.dispatch(setCurrentUser()).then(() => {
 			if (!isLoggedIn) {
@@ -27,7 +25,7 @@
 
 {#if isLoggedIn}
 	<!-- ... -->
-	<Drawer>
+	<Drawer page={$page}>
 		<!-- Page content here -->
 		<slot />
 	</Drawer>
