@@ -7,7 +7,7 @@
 	<ul>
 		{#each path as item}
 			<li>
-				<a>
+				<a href="/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"

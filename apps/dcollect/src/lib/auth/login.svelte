@@ -32,6 +32,7 @@
 	function onSubmit(data: any) {
 		const { values, valid } = data;
 		const then = (res: any) => {
+			console.log('login success', res);
 			goto(`/admin`, { replaceState: true });
 		};
 		if (valid) {
