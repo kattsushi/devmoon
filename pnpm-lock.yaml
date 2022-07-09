@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@sveltejs/kit': 1.0.0-next.367
       '@sveltejs/vite-plugin-svelte': next
       husky: ^8.0.0
       lint-staged: ^13.0.3
@@ -13,6 +14,7 @@ importers:
       turbo: latest
       vite: ^2.9.13
     devDependencies:
+      '@sveltejs/kit': 1.0.0-next.367_svelte@3.49.0+vite@2.9.14
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.29_svelte@3.49.0+vite@2.9.14
       husky: 8.0.1
       lint-staged: 13.0.3
