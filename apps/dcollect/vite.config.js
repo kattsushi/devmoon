@@ -5,10 +5,10 @@ const config = {
 	plugins: [sveltekit()],
 	vite: {
 		ssr: {
-			noExternal: ['@devmoon-libs/ui', '@devmoon-dcollect-libs/store', 'svelte-fa', 'daisyui']
+			noExternal: ['@devmoon-libs/ui', '@devmoon-dcollect-libs/store', 'svelte-fa', 'daisyui', 'gun']
 		},
 		optimizeDeps: {
-			include: ['@devmoon-libs/ui', '@devmoon-dcollect-libs/store', 'svelte-fa', 'daisyui']
+			include: ['@devmoon-libs/ui', '@devmoon-dcollect-libs/store', 'svelte-fa', 'daisyui', 'gun']
 		}
 	}
 };
