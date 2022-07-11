@@ -5,7 +5,7 @@
 	export let logo: string = undefined;
 </script>
 
-<div>
+<div class="text-center mb-4 mt-5">
 	<Icon icon={faCircleNodes} />
 	{#if logo}
 		{logo}

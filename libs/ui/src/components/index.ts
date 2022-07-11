@@ -8,3 +8,5 @@ export { default as Icon } from './icon/icon.svelte';
 export { default as Logo } from './logo/logo.svelte';
 export { default as Navbar } from './navbar/navbar.svelte';
 export { default as Sidebar } from './sidebar/sidebar.svelte';
+
+export * from './atoms';

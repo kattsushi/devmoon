@@ -6,6 +6,7 @@
 	import Avatar from '../atoms/avatar/avatar.svelte';
 	import { createEventDispatcher } from 'svelte';
 	import Logo from '../logo/logo.svelte';
+	import Divider from '../atoms/divider/divider.svelte';
 
 	export let sidebarItems: any[];
 	export let user: any;
@@ -26,13 +27,14 @@
 </script>
 
 <div class="hidden sm:block h-full">
-	<div class="flex-column menu bg-base-100 mt-2 p-3 pt-4 rounded-box h-full">
-		<ul on:click|preventDefault={toogleDrawer}>
-			<li>
-				<Logo />
-			</li>
+	<div class="flex-column menu bg-base-100 p-2.5 pt-4 rounded-box h-full" style="width: 70px;">
+		<div on:click|preventDefault={toogleDrawer}>
+			<Logo />
+		</div>
+		<Divider isHorizontal={true} />
+		<ul>
 			{#each sidebarItems as item}
-				<li class="mt-3 py-1" class:active={pathname.includes(item.href)}>
+				<li class="mt-1 py-1" class:active={pathname.includes(item.href)}>
 					<a href={item.href}>
 						<Icon icon={item.icon} />
 					</a>

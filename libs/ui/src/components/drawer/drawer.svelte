@@ -5,7 +5,7 @@
 	import {
 		faBarsProgress,
 		faSignOutAlt,
-		faBacterium,
+		faSquareShareNodes,
 		faCircleNodes
 	} from '@fortawesome/free-solid-svg-icons/index.es';
 	import Icon from '../icon/icon.svelte';
@@ -28,14 +28,14 @@
 			href: '/admin/dashboard'
 		},
 		{
-			name: 'Entities',
-			icon: faBacterium,
-			href: '/admin/entities'
+			name: 'Nodes',
+			icon: faSquareShareNodes,
+			href: '/admin/nodes'
 		},
 		{
 			name: 'Entitie Detail',
 			icon: faBarsProgress,
-			href: '/admin/entities/1'
+			href: '/admin/nodes/1'
 		}
 		// {
 		//   name: 'Pages',

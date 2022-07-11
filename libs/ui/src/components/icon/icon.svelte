@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Fa from 'svelte-fa';
-	export let icon: any;
+	import Icon from 'svelte-awesome/components/Icon.svelte';
+	export let icon;
 </script>
 
-<Fa {icon} />
+<Icon data={icon} />

@@ -1,6 +1,5 @@
 <script lang="ts">
-	export let page: any;
-	const { id } = page.params;
+	export let id: string;
 </script>
 
 <h1>entity detail id: {id}</h1>
