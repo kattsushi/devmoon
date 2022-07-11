@@ -1,18 +1,17 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 
-const moduleExclude = match => {
-	const m = id => id.indexOf(match) > -1
+const moduleExclude = (match) => {
+	const m = (id) => id.indexOf(match) > -1;
 	return {
 		name: `exclude-${match}`,
 		resolveId(id) {
-			if (m(id)) return id
+			if (m(id)) return id;
 		},
 		load(id) {
-			if (m(id)) return `export default {}`
-		},
-	}
-}
-
+			if (m(id)) return `export default {}`;
+		}
+	};
+};
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -28,7 +27,12 @@ const config = {
 			]
 		},
 		optimizeDeps: {
-			include: ['@devmoon-libs/ui', '@devmoon-dcollect-libs/store', 'svelte-fa', 'daisyui', 'gun',
+			include: [
+				'@devmoon-libs/ui',
+				'@devmoon-dcollect-libs/store',
+				'svelte-fa',
+				'daisyui',
+				'gun',
 				'gun/gun',
 				'gun/sea',
 				'gun/sea.js',
@@ -37,12 +41,10 @@ const config = {
 				'gun/lib/radix',
 				'gun/lib/radisk',
 				'gun/lib/store',
-				'gun/lib/rindexed',
-]
+				'gun/lib/rindexed'
+			]
 		},
-		plugins: [
-			moduleExclude('text-encoding'),
-		],
+		plugins: [moduleExclude('text-encoding')]
 	}
 };
 
