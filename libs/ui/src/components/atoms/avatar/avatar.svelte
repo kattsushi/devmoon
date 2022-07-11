@@ -1,12 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	export let picture: string;
 	export let username: string = '';
-
-	onMount(() => {
-		console.log('username', username);
-	});
 </script>
 
 <div class="bordered no-underline hover:no-underline">

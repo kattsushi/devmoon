@@ -1,13 +1,20 @@
 <script lang="ts">
 	import Icon from '../icon/icon.svelte';
-	import { faCircleNodes, faSignOutAlt } from '@fortawesome/free-solid-svg-icons/index.es';
+	import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons/index.es';
 	import { logout } from '@devmoon-dcollect-libs/store';
 	import { store } from '@devmoon-dcollect-libs/store';
 	import Avatar from '../atoms/avatar/avatar.svelte';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import Logo from '../logo/logo.svelte';
 	import Divider from '../atoms/divider/divider.svelte';
+	import ToggleTheme from '../molecules/toggle-theme/toggle-theme.svelte';
 
+	let isDark: boolean = false;
+
+	function changeTheme(e) {
+		console.log('changeTheme', e);
+		// themeChange(false);
+	}
 	export let sidebarItems: any[];
 	export let user: any;
 	export let pathname: string;
@@ -15,12 +22,7 @@
 		store.dispatch(logout());
 	}
 
-	function handleMenuClick(e: any) {
-		console.log(e);
-	}
-
 	const dispatch = createEventDispatcher();
-
 	function toogleDrawer(): void {
 		dispatch('toogleDrawer');
 	}
@@ -42,16 +44,20 @@
 			{/each}
 		</ul>
 
-		<ul class="mt-auto">
-			<li>
-				<Avatar picture={user?.photo ?? ''} />
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<a on:click|preventDefault={handleLogout}>
-					<!-- svelte-ignore missing-declaration -->
-					<Icon icon={faSignOutAlt} />
-				</a>
-			</li>
-		</ul>
+		<!-- <button on:click={ () => }>clickme</button> -->
+		<div class="mt-auto">
+			<ToggleTheme />
+			<ul>
+				<li>
+					<Avatar picture={user?.photo ?? ''} />
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<a on:click|preventDefault={handleLogout}>
+						<!-- svelte-ignore missing-declaration -->
+						<Icon icon={faSignOutAlt} />
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 

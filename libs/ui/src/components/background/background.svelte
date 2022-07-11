@@ -1,5 +1,4 @@
 <script lang="ts">
-	console.log('background.svelte');
 </script>
 
 <div class="header">

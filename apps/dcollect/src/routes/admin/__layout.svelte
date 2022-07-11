@@ -24,7 +24,6 @@
 </svelete:head>
 
 {#if isLoggedIn}
-	<!-- ... -->
 	<Drawer page={$page}>
 		<!-- Page content here -->
 		<slot />

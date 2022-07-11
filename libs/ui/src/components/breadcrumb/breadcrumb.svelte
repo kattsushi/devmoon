@@ -1,13 +1,29 @@
 <script lang="ts">
-	export let path: string[];
-	console.log(path);
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { navigating } from '$app/stores';
+
+	$: path = [];
+
+	if ($navigating) {
+		path = ['Nodes'];
+		path.push($page.params.id);
+		console.log('path', path);
+	}
+
+	onMount(() => {
+		console.log('path', $page);
+		path = ['Nodes'];
+		path.push($page.params.id);
+		console.log('path', path);
+	});
 </script>
 
-<div class="text-sm breadcrumbs">
+<div class="text-lg breadcrumbs text-stone-500 ">
 	<ul>
 		{#each path as item}
 			<li>
-				<a href="/">
+				<a class="text-primary" href="/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -20,7 +36,9 @@
 							d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
 						/></svg
 					>
-					{item}
+					<span>
+						{item}
+					</span>
 				</a>
 			</li>
 		{/each}

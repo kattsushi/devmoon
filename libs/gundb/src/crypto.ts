@@ -18,7 +18,6 @@ export const encryptData = async (data: any) => {
 };
 
 export const decryptData = async (data: any) => {
-	console.log('decryptData', pair);
 	try {
 		const verification = await Gun.SEA.verify(data, pair.pub);
 		const decrypted = await Gun.SEA.decrypt(verification, pair);

@@ -1,7 +1,7 @@
 import * as toolkitRaw from '@reduxjs/toolkit';
 const { configureStore } = ((toolkitRaw as any).default ?? toolkitRaw) as typeof toolkitRaw;
 import authSlice from './auth/store';
-import enititySlice from './entity/store';
+import nodesSlice from './nodes/store';
 
 function svelteStoreEnhancer(createStoreApi: Function): any {
 	return function (reducer: any, initialState: RootState) {
@@ -22,7 +22,7 @@ function svelteStoreEnhancer(createStoreApi: Function): any {
 export const store = configureStore({
 	reducer: {
 		auth: authSlice,
-		entity: enititySlice
+		nodes: nodesSlice
 	},
 	devTools: process.env.NODE_ENV !== 'production',
 	enhancers: [svelteStoreEnhancer]
