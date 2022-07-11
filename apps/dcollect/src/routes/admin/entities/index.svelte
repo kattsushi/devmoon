@@ -4,3 +4,4 @@
 </script>
 
 <Entity page={$page} />
+<slot />
