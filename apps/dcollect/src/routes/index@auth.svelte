@@ -14,6 +14,3 @@
 <!-- ... -->
 
 <AuthLogin />
-
-<style>
-</style>

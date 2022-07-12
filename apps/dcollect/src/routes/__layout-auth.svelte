@@ -35,6 +35,3 @@
 		</div>
 	</Background>
 </main>
-
-<style>
-</style>
