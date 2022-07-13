@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SearchBar, Navbar } from '@devmoon-libs/ui';
 
-	export let id: string;
+	export const id: string = 'node-detail';
 </script>
 
 <div class="flex flex-col p-2">
