@@ -9,3 +9,4 @@ interface ImportMetaEnv {
 }
 declare module '@fortawesome/free-solid-svg-icons/index.es';
 declare module 'gun-avatar';
+declare module 'theme-change';

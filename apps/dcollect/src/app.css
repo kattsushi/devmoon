@@ -19,6 +19,10 @@
 	--column-margin-top: 4rem;
 }
 
+html[data-theme='light'] .label {
+	color: #444444;
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;

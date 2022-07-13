@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { themeChange } from 'theme-change';
 	import { Background } from '@devmoon-libs/ui';
 	import '../app.css';
 	import { store, useSelector, authSelectors, setCurrentUser } from '@devmoon-dcollect-libs/store';
@@ -6,6 +7,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
+		themeChange(false);
 		store.dispatch(setCurrentUser()).then(() => {
 			if (isLoggedIn) {
 				goto('/admin/dashboard');
