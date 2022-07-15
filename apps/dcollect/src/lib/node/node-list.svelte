@@ -1,10 +1,20 @@
 <script lang="ts">
 	import { Divider, Icon, Menu, MenuItem, Modal, SearchBar } from '@devmoon-libs/ui';
-	import { faFolder, faFolderOpen } from '@fortawesome/free-solid-svg-icons/index.es';
+	// import  from '@devmoon-libs/ui/src/components/icon/icon.svelte';
+	// import  from '@devmoon-libs/ui/src/components/atoms/menu/menu.svelte';
+	// import  from '@devmoon-libs/ui/src/components/atoms/menu-item/menu-item.svelte';
+	// import  from '@devmoon-libs/ui/src/components/molecules/modal/modal.svelte';
+	// import  from '@devmoon-libs/ui/src/components/molecules/search-bar/search-bar.svelte';
+
+	import { openModal } from 'svelte-modals';
 	export let page: any;
-	import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
+	import { faPlusSquare, faFolder, faFolderOpen } from '@fortawesome/free-regular-svg-icons';
 
 	let isModalOpen = false;
+
+	function handleOpen() {
+		openModal(Modal);
+	}
 </script>
 
 <!-- <Breadcrumb path={page.url.pathname.split('/').slice(1)} /> -->
@@ -30,5 +40,5 @@
 		<Icon icon={faPlusSquare} />
 		<span class="ml-3"> Add new Node </span>
 	</button>
-	<Modal {isModalOpen} />
+	<Modal isOpen={isModalOpen} />
 </div>

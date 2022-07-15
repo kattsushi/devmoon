@@ -2,19 +2,14 @@
 	import Logo from '../logo/logo.svelte';
 	import Navbar from '../navbar/navbar.svelte';
 	import Sidebar from '../sidebar/sidebar.svelte';
-	import {
-		faBarsProgress,
-		faSignOutAlt,
-		faSquareShareNodes,
-		faCircleNodes
-	} from '@fortawesome/free-solid-svg-icons/index.es';
+	import { faAddressBook, faWindowClose } from '@fortawesome/free-regular-svg-icons';
 	import Icon from '../icon/icon.svelte';
-	import { store, useSelector, logout, authSelectors } from '@devmoon-dcollect-libs/store';
 	import Avatar from '../atoms/avatar/avatar.svelte';
 
 	export let page: any;
 
-	$: currentUser = useSelector(authSelectors.currentUser, (user: any) => (currentUser = user));
+	// $: currentUser = useSelector(authSelectors.currentUser, (user: any) => (currentUser = user));
+	let currentUser: any = {};
 	let checked = false;
 	interface Items {
 		name: string;
@@ -24,17 +19,17 @@
 	let sidebarItems: Items[] = [
 		{
 			name: 'Dashboard',
-			icon: faBarsProgress,
+			icon: faAddressBook,
 			href: '/admin/dashboard'
 		},
 		{
 			name: 'Nodes',
-			icon: faSquareShareNodes,
+			icon: faWindowClose,
 			href: '/admin/nodes'
 		},
 		{
 			name: 'Entitie Detail',
-			icon: faBarsProgress,
+			icon: faWindowClose,
 			href: '/admin/nodes/1'
 		}
 		// {
@@ -57,7 +52,7 @@
 	}
 
 	function handleLogout(): void {
-		store.dispatch(logout());
+		// store.dispatch(logout());
 	}
 </script>
 
@@ -72,7 +67,7 @@
 				<Sidebar
 					on:toogleDrawer={toogleDrawer}
 					pathname={page.url.pathname}
-					user={currentUser}
+					user={null}
 					{sidebarItems}
 				/>
 			</div>
@@ -106,8 +101,8 @@
 			<li class="mt-auto">
 				<Avatar picture={currentUser?.photo ?? ''} username={currentUser?.username ?? ''} />
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<a on:click|preventDefault={logout} class="bordered no-underline hover:no-underline">
-					<Icon icon={faSignOutAlt} />
+				<a class="bordered no-underline hover:no-underline">
+					<Icon icon={faWindowClose} />
 					Logout
 				</a>
 			</li>

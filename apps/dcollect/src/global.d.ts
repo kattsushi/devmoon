@@ -7,6 +7,7 @@ interface ImportMetaEnv {
 	GUN_EPRIV_KEY: string;
 	GUN_TOKEN: string;
 }
-declare module '@fortawesome/free-solid-svg-icons/index.es';
 declare module 'gun-avatar';
 declare module 'theme-change';
+declare module 'svelte-table';
+declare module 'svelte-paginate';

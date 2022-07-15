@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { themeChange } from 'theme-change';
-	import { Background } from '@devmoon-libs/ui';
+	import Background from '@devmoon-libs/ui/src/components/background/background.svelte';
 	import '../app.css';
-	import { store, useSelector, authSelectors, setCurrentUser } from '@devmoon-dcollect-libs/store';
+	import store, { useSelector } from '$lib/store/store';
+	import { setCurrentUser } from '$lib/store/auth/store/actions';
+	import { authSelectors } from '$lib/store/auth/store/selectors';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 

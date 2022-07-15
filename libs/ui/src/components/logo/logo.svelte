@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Icon from '../icon/icon.svelte';
-	import { faCircleNodes } from '@fortawesome/free-solid-svg-icons/index.es';
+	import { faWindowClose } from '@fortawesome/free-regular-svg-icons';
 
 	export let logo: string = undefined;
 </script>
 
 <div class="text-center mb-4 mt-5">
-	<Icon icon={faCircleNodes} />
+	<Icon icon={faWindowClose} />
 	{#if logo}
 		{logo}
 	{/if}

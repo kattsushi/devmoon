@@ -23,6 +23,39 @@ html[data-theme='light'] .label {
 	color: #444444;
 }
 
+@layer components {
+	.pagination-nav {
+		@apply btn-group m-auto;
+	}
+	.option {
+		@apply btn rounded-none;
+	}
+	.option.active {
+		@apply btn-primary;
+	}
+	.option:hover {
+		@apply btn-primary;
+	}
+	.option.disabled {
+		@apply btn-secondary;
+	}
+	.option.disabled:hover {
+		@apply btn-secondary;
+	}
+	.option.disabled:active {
+		@apply btn-secondary;
+	}
+	.option.next {
+		@apply btn-primary rounded-tr-lg rounded-br-lg;
+	}
+	.option.next:hover {
+		@apply btn-primary;
+	}
+	.option.prev {
+		@apply btn-primary rounded-tl-lg rounded-bl-lg;
+	}
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;

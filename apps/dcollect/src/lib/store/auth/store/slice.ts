@@ -1,5 +1,5 @@
 // import { goto } from '$app/navigation';
-import { user } from '@devmoon-libs/gundb';
+import { user } from '$lib/gundb';
 import * as toolkitRaw from '@reduxjs/toolkit';
 const { createSlice } = ((toolkitRaw as any).default ?? toolkitRaw) as typeof toolkitRaw;
 import { login, setCurrentUser } from './actions';

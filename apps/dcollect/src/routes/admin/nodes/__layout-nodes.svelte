@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import NodeList from '$lib/node/node-list.svelte';
-	import Divider from '@devmoon-libs/ui/src/components/atoms/divider/divider.svelte';
+	import { Divider } from '@devmoon-libs/ui';
 	let showDetail = false;
 	if ($page.routeId === 'admin/nodes/[id]@nodes' || $page.routeId === 'admin/nodes@nodes') {
 		showDetail = true;

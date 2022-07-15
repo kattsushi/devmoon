@@ -7,7 +7,7 @@
 		dispatch('toogleDrawer');
 	}
 
-	export let user: any;
+	export let user: any = null;
 </script>
 
 <div class="navbar bg-base-100 rounded-xl">

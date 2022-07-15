@@ -20,7 +20,7 @@ const config = {
 		ssr: {
 			noExternal: [
 				'@devmoon-libs/ui',
-				'@devmoon-dcollect-libs/store',
+				'@fortawesome/fontawesome-svg-core',
 				'svelte-fa',
 				'daisyui',
 				'gun'
@@ -29,7 +29,7 @@ const config = {
 		optimizeDeps: {
 			include: [
 				'@devmoon-libs/ui',
-				'@devmoon-dcollect-libs/store',
+				'@fortawesome/fontawesome-svg-core',
 				'svelte-fa',
 				'daisyui',
 				'gun',

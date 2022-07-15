@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Form } from '@devmoon-libs/ui';
-	import { store, login } from '@devmoon-dcollect-libs/store';
+	import store from '$lib/store/store';
+	import { login } from '$lib/store/auth/store/actions';
 	import { goto } from '$app/navigation';
 	const form_name: string = 'LoginForm';
 	const fields = [

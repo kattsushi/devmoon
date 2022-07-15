@@ -1,6 +1,6 @@
-import { gun, user } from '@devmoon-libs/gundb';
+import { gun, user } from '$lib/gundb';
 import { v4 as uuidv4 } from 'uuid';
-import { decryptData, encryptData } from '@devmoon-libs/gundb';
+import { decryptData, encryptData } from '$lib/gundb';
 
 export const createNode = async (data) => {
 	return new Promise(async (resolve, reject) => {

@@ -1,7 +1,7 @@
 import Gun from 'gun';
 import 'gun/sea.js';
 import 'gun/axe.js';
-import { variables } from '@devmoon-libs/variables';
+import { variables } from '$lib/variables';
 
 const { pair } = variables.gun;
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Icon from '../icon/icon.svelte';
-	import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons/index.es';
-	import { logout } from '@devmoon-dcollect-libs/store';
-	import { store } from '@devmoon-dcollect-libs/store';
+	import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
+	// import { logout } from '@devmoon-dcollect-libs/store';
+	// import { store } from '@devmoon-dcollect-libs/store';
 	import Avatar from '../atoms/avatar/avatar.svelte';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import Logo from '../logo/logo.svelte';
@@ -19,7 +19,7 @@
 	export let user: any;
 	export let pathname: string;
 	function handleLogout() {
-		store.dispatch(logout());
+		// store.dispatch(logout());
 	}
 
 	const dispatch = createEventDispatcher();
@@ -53,7 +53,7 @@
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<a on:click|preventDefault={handleLogout}>
 						<!-- svelte-ignore missing-declaration -->
-						<Icon icon={faSignOutAlt} />
+						<Icon icon={faArrowAltCircleRight} />
 					</a>
 				</li>
 			</ul>

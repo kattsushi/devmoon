@@ -24,7 +24,7 @@ export const store = configureStore({
 		auth: authSlice,
 		nodes: nodesSlice
 	},
-	devTools: process.env.NODE_ENV !== 'production',
+	devTools: true,
 	enhancers: [svelteStoreEnhancer]
 });
 

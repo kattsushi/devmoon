@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Form } from '@devmoon-libs/ui';
-	import { store, useSelector, register } from '@devmoon-dcollect-libs/store';
+	import store, { useSelector } from '$lib/store/store';
+	import { register } from '$lib/store/auth/store/actions';
 	import { goto } from '$app/navigation';
 	const form_name: string = 'RegiserForm';
 	const fields = [

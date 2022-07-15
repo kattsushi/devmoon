@@ -1,4 +1,4 @@
-import { decryptData, encryptData, gun, user } from '@devmoon-libs/gundb';
+import { decryptData, encryptData, gun, user } from '$lib/gundb';
 export const generateGenericUserData = (date: any, username: string, email: string) => {
 	return {
 		followers: [],

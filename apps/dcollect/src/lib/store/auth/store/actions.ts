@@ -1,5 +1,5 @@
 // import { goto } from '$app/navigation';
-import { gun, user, decryptData, handleAuthResponse } from '@devmoon-libs/gundb';
+import { gun, user, decryptData, handleAuthResponse } from '$lib/gundb';
 import * as toolkitRaw from '@reduxjs/toolkit';
 const { createAsyncThunk } = ((toolkitRaw as any).default ?? toolkitRaw) as typeof toolkitRaw;
 import { createUser } from '../services/user';
