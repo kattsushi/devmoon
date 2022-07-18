@@ -2,6 +2,10 @@
 	"name": "devmoon",
 	"version": "0.0.1",
 	"private": true,
+	"author": {
+		"name": "devmoon",
+		"email": "andresdavid@outlook.com"
+	},
 	"workspaces": [
 		"apps/*",
 		"libs/*"
