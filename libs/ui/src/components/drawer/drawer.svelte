@@ -2,7 +2,11 @@
 	import Logo from '../logo/logo.svelte';
 	import Navbar from '../navbar/navbar.svelte';
 	import Sidebar from '../sidebar/sidebar.svelte';
-	import { faAddressBook, faWindowClose } from '@fortawesome/free-regular-svg-icons';
+	import thLarge from 'svelte-awesome/icons/thLarge';
+	import connectdevelop from 'svelte-awesome/icons/connectdevelop';
+	import sliders from 'svelte-awesome/icons/sliders';
+	import signOut from 'svelte-awesome/icons/signOut';
+
 	import Icon from '../icon/icon.svelte';
 	import Avatar from '../atoms/avatar/avatar.svelte';
 
@@ -19,17 +23,17 @@
 	let sidebarItems: Items[] = [
 		{
 			name: 'Dashboard',
-			icon: faAddressBook,
+			icon: thLarge,
 			href: '/admin/dashboard'
 		},
 		{
 			name: 'Nodes',
-			icon: faWindowClose,
+			icon: connectdevelop,
 			href: '/admin/nodes'
 		},
 		{
 			name: 'Entitie Detail',
-			icon: faWindowClose,
+			icon: sliders,
 			href: '/admin/nodes/1'
 		}
 		// {
@@ -102,7 +106,7 @@
 				<Avatar picture={currentUser?.photo ?? ''} username={currentUser?.username ?? ''} />
 				<!-- svelte-ignore a11y-missing-attribute -->
 				<a class="bordered no-underline hover:no-underline">
-					<Icon icon={faWindowClose} />
+					<Icon icon={signOut} />
 					Logout
 				</a>
 			</li>

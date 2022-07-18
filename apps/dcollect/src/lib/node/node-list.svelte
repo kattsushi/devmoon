@@ -1,15 +1,12 @@
 <script lang="ts">
 	import { Divider, Icon, Menu, MenuItem, Modal, SearchBar } from '@devmoon-libs/ui';
-	// import  from '@devmoon-libs/ui/src/components/icon/icon.svelte';
-	// import  from '@devmoon-libs/ui/src/components/atoms/menu/menu.svelte';
-	// import  from '@devmoon-libs/ui/src/components/atoms/menu-item/menu-item.svelte';
-	// import  from '@devmoon-libs/ui/src/components/molecules/modal/modal.svelte';
-	// import  from '@devmoon-libs/ui/src/components/molecules/search-bar/search-bar.svelte';
 
 	import { openModal } from 'svelte-modals';
-	export let page: any;
-	import { faPlusSquare, faFolder, faFolderOpen } from '@fortawesome/free-regular-svg-icons';
+	import folderO from 'svelte-awesome/icons/folderO';
+	import folderOpenO from 'svelte-awesome/icons/folderOpenO';
+	import plusSquare from 'svelte-awesome/icons/plusSquare';
 
+	export let page: any;
 	let isModalOpen = false;
 
 	function handleOpen() {
@@ -25,11 +22,11 @@
 
 	<Menu>
 		<MenuItem href={'/admin/nodes/1'}>
-			<Icon icon={page.url.pathname.includes('/admin/nodes/1') ? faFolderOpen : faFolder} />
+			<Icon icon={page.url.pathname.includes('/admin/nodes/1') ? folderOpenO : folderO} />
 			Node 1
 		</MenuItem>
 		<MenuItem href={'/admin/nodes/2'}>
-			<Icon icon={page.url.pathname.includes('/admin/nodes/2') ? faFolderOpen : faFolder} />
+			<Icon icon={page.url.pathname.includes('/admin/nodes/2') ? folderOpenO : folderO} />
 			Node 2
 		</MenuItem>
 	</Menu>
@@ -37,7 +34,7 @@
 	<Divider isHorizontal={true} />
 
 	<button class="btn btn-primary btn-block" on:click={() => (isModalOpen = !isModalOpen)}>
-		<Icon icon={faPlusSquare} />
+		<Icon icon={plusSquare} />
 		<span class="ml-3"> Add new Node </span>
 	</button>
 	<Modal isOpen={isModalOpen} />

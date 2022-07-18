@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '../icon/icon.svelte';
-	import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
+	import signOut from 'svelte-awesome/icons/signOut';
 	// import { logout } from '@devmoon-dcollect-libs/store';
 	// import { store } from '@devmoon-dcollect-libs/store';
 	import Avatar from '../atoms/avatar/avatar.svelte';
@@ -53,7 +53,7 @@
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<a on:click|preventDefault={handleLogout}>
 						<!-- svelte-ignore missing-declaration -->
-						<Icon icon={faArrowAltCircleRight} />
+						<Icon icon={signOut} />
 					</a>
 				</li>
 			</ul>

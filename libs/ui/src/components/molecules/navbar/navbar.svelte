@@ -1,6 +1,6 @@
 <script>
 	import Breadcrumb from '../../breadcrumb/breadcrumb.svelte';
-	import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
+	import plusSquare from 'svelte-awesome/icons/plusSquare';
 	import Icon from '../../icon/icon.svelte';
 </script>
 
@@ -9,7 +9,7 @@
 		<Breadcrumb />
 	</div>
 	<button class="btn btn-primary ml-auto">
-		<Icon icon={faPlusSquare} />
+		<Icon icon={plusSquare} />
 		<span class="ml-3"> Add new Node </span>
 	</button>
 </div>

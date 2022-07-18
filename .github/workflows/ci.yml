@@ -37,14 +37,14 @@ jobs:
 
       - name: Build
         run: pnpm build
-      # - name: Install vercel
-      #   run: npm install -g vercel
-      # - uses: amondnet/vercel-action@v20
-      #   id: now-deployment-production
-      #   if: github.event_name == 'push'
-      #   with:
-      #     github-token: ${{ secrets.GH_PAT }}
-      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
-      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-      #     vercel-args: '--prod'
+      - name: Install vercel
+        run: npm install -g vercel
+      - uses: amondnet/vercel-action@v20
+        id: now-deployment-production
+        if: github.event_name == 'push'
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
