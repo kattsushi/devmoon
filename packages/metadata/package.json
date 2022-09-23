@@ -1,0 +1,28 @@
+{
+	"name": "@devmoon/metadata",
+	"author": {
+		"name": "Andres Jimenez",
+		"email": "andresdavid@outlook.com"
+	},
+	"version": "0.2.0",
+	"description": "",
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"svelte": "./dist/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.js"
+		},
+		"./default": {
+			"import": "./dist/default.js"
+		}
+	},
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"dependencies": {},
+	"devDependencies": {}
+}

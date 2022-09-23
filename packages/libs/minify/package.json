@@ -1,0 +1,26 @@
+{
+	"name": "@devmoon/minify",
+	"version": "0.2.0",
+	"description": "",
+	"author": {
+		"name": "Andres Jimenez",
+		"email": "andresdavid@outlook.com"
+	},
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"package": "pnpm exec node ./src/index.js -d src -o dist -m --module --clean"
+	},
+	"keywords": [],
+	"dependencies": {
+		"argv-to-object": "^1.0.1",
+		"rfdc": "^1.3.0",
+		"terser": "^5.14.1"
+	},
+	"bin": {
+		"minify": "./dist/index.js"
+	}
+}

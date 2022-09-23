@@ -1,0 +1,45 @@
+{
+	"private": true,
+	"name": "devmoon",
+	"description": "PNPM + Nx + Sveltekit",
+	"version": "1.0.0",
+	"author": "Andres Jimenez",
+	"keywords": [
+		"Svelte",
+		"Sveltekit",
+		"Nx",
+		"PNPM",
+		"Monorepo"
+	],
+	"license": "MIT",
+	"workspaces": [
+		"apps/*",
+		"packages/**"
+	],
+	"scripts": {
+		"preinstall": "pnpm exec inherit -u",
+		"format": "prettier --write --plugin-search-dir=. .",
+		"prepare": "husky install",
+		"precommit": "lint-staged",
+		"plop": "plop",
+		"clean": "git clean -fXd"
+	},
+	"devDependencies": {
+		"@devmoon/inherit": "workspace:^0.2.0",
+		"@devmoon/minify": "workspace:^0.2.0",
+		"autoprefixer": "^10.4.7",
+		"husky": "^8.0.1",
+		"lint-staged": "^12.5.0",
+		"nx": "^14.7.13",
+		"plop": "^3.1.0",
+		"prettier": "^2.7.0",
+		"vite": "^3.1.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"svelte-preprocess": "^4.10.6"
+	},
+	"lint-staged": {
+		"*.{json,css,md,ts,html,svelte}": "npm run format"
+	}
+}
