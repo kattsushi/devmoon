@@ -161,13 +161,17 @@
 			on:submit|preventDefault={onSubmit}
 		>
 			{#each formBuilder.fields as { name, attributes, value, type, colSpan, extra }}
-				<div class={`relative form-control ${colSpan}`}>
+				<div class={`relative ${colSpan}`}>
 					<Field
+						name={attributes.name}
+						type={attributes.type}
+						value={attributes.value}
+						placeholder={attributes.placeholder}
+						autocomplete={attributes.autocomplete}
+						id={attributes.id}
+						disabled={attributes.disabled}
 						error={$touched[name] && $validity[name]?.invalid}
-						{name}
-						{value}
-						{attributes}
-						{type}
+						fieldType={type}
 						{extra}
 					/>
 					<div
@@ -198,13 +202,17 @@
 								class="collapse-content bg-secondary text-secondary-content peer-checked:bg-base-100 peer-checked:text-primary-content mt-4"
 							>
 								{#each formBuilder.groupsFormsOptions.fields as { name, attributes, type, colSpan, extra }}
-									<div class={`relative form-control ${colSpan} mb-2`}>
+									<div class={`relative ${colSpan} mb-2`}>
 										<Field
+											name={attributes.name}
+											type={attributes.type}
+											value={attributes.value}
+											placeholder={attributes.placeholder}
+											autocomplete={attributes.autocomplete}
+											disabled={attributes.disabled}
 											error={$touched[name] && $validity[name]?.invalid}
-											{name}
-											value={row[name]}
-											attributes={{ ...attributes, id: `${name}-${i}` }}
-											{type}
+											id={`${name}-${i}`}
+											fieldType={type}
 											{extra}
 										/>
 										<div
@@ -234,18 +242,14 @@
 			<slot />
 			<div class="form-control col-span-full">
 				{#if hasCancelButton}
-					<Button
-						variant="ring-warning"
-						customClass="my-2"
-						on:click={() => dispatch('onCancel')}
-						type="button">{cancelButtonText}</Button
+					<Button class="my-2 w-full" on:click={() => dispatch('onCancel')} type="button"
+						>{cancelButtonText}</Button
 					>
 				{/if}
-				<Button type={'submit'}>
+				<Button background="primary" class="w-full" type={'submit'}>
 					{submitButtonText}
 				</Button>
 			</div>
 		</form>
 	{/if}
 </Card>
-1

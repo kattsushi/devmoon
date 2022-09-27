@@ -20,7 +20,7 @@
 		"argv-to-object": "^1.0.1",
 		"detect-newline": "^4.0.0",
 		"parse-package-name": "^1.0.0",
-		"workspace-tools": "^0.19.1"
+		"workspace-tools": "^0.28.1"
 	},
 	"bin": {
 		"inherit": "./dist/index.js"

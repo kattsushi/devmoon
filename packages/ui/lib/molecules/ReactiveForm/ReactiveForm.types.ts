@@ -24,9 +24,9 @@ export type IField = {
 	rules?: FieldRule[]
 	value?: string
 	messages?: any
-	attributes?: IFieldAttributes | HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+	attributes?: any
 	extra?: {
-		options: any[]
+		options?: any[]
 		[key: string]: any
 	}
 }

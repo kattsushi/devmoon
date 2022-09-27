@@ -59,9 +59,7 @@
 	on:onSubmit={onSubmit}
 	hasCancelButton={false}
 >
-	<Button customClass="col-span-full" variant="ring-primary">
-		<a class="btn btn-link col-span-full my-2" data-sveltekit-prefetch href="/">
-			Already have an account? go to login
-		</a>
+	<Button class="col-span-full" href="/" variant="ring-primary">
+		Already have an account? go to login
 	</Button>
 </ReactiveForm>

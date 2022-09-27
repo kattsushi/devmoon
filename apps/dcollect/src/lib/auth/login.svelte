@@ -12,9 +12,11 @@
 				attributes: {
 					type: 'text',
 					id: 'username',
-					label: 'Email or Username',
-					placeholder: 'Email or Username',
+					placeholder: ' ',
 					required: true
+				},
+				extra: {
+					label: 'Email or Username'
 				}
 			},
 			{
@@ -30,9 +32,12 @@
 				attributes: {
 					type: 'password',
 					id: 'password',
-					label: 'Password',
-					placeholder: 'Password',
-					required: true
+					placeholder: ' ',
+					required: true,
+					class: 'w-full'
+				},
+				extra: {
+					label: 'Password'
 				}
 			}
 		]
@@ -51,7 +56,7 @@
 </script>
 
 <ReactiveForm {formBuilder} submitButtonText="Login" on:onSubmit={onSubmit} hasCancelButton={false}>
-	<Button customClass="col-span-full" variant="ring-primary">
-		<a data-svektekit-prefetch href="/register"> Register </a>
-	</Button>
+	<div class="col-span-full">
+		<Button href="/register" background="none" class="w-full">Register</Button>
+	</div>
 </ReactiveForm>

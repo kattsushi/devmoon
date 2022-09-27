@@ -1,37 +1,23 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-
-	export let attributes: any = {
-		id: '',
-		type: 'text'
+	type OwnProps = {
+		error: boolean
 	}
-	export let value = ''
-	export let name = ''
-	export let error: boolean = true
+	type $$Props = svelteHTML.IntrinsicElements['input'] & OwnProps
 
-	onMount(() => {})
+	export let error: OwnProps['error'] = false
+	export let value = ''
 
 	const ref = (node: HTMLInputElement) => {
-		node.type = attributes.type
-		if (attributes.type === 'number') {
-			node.max = attributes['max']
-			node.min = attributes['min']
+		node.type = $$restProps.type
+		if ($$restProps.type === 'number') {
+			node.max = $$restProps['max']
+			node.min = $$restProps['min']
 		}
 	}
 </script>
 
-<input
-	id={attributes.id}
-	{name}
-	use:ref
-	bind:value
-	placeholder={attributes.placeholder}
-	required={attributes.required}
-	disabled={attributes.disabled}
-	autocomplete={attributes.autocomplete}
-	class:!input-error={error}
-	class="placeholder-red-500"
-/>
-{#if attributes.type === 'checkbox'}
-	<label class="relative -bottom-5" for={name}>{attributes.placeholder}</label>
+<input {...$$restProps} use:ref bind:value class:!input-error={error} />
+{#if $$restProps.type === 'checkbox'}
+	<label class="relative -bottom-5" for={$$restProps.name}>{$$restProps.placeholder}</label>
 {/if}

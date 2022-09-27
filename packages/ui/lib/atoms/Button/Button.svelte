@@ -1,39 +1,58 @@
 <script lang="ts">
-	import { Button } from '@brainandbones/skeleton'
+	import { onMount } from 'svelte'
+
+	type OwnProps = {
+		size: 'sm' | 'base' | 'lg' | 'xl'
+		background: 'none' | 'primary' | 'acent' | 'secondary' | 'warning' | 'surface'
+		color: 'text-white' | 'text-black' | string
+		iconPosition: 'left' | 'right'
+		icon: string
+		variant: 'filled' | 'ringed' | 'ghost'
+	}
+
+	type $$Props =
+		| (svelteHTML.IntrinsicElements['button'] & OwnProps)
+		| (svelteHTML.IntrinsicElements['a'] & OwnProps)
+
 	import Icon from './../Icon/Icon.svelte'
 
-	export let icon: string = undefined
-	export let size: 'none' | 'sm' | 'base' | 'lg' | 'xl' = 'base'
-	export let variant: 'text' | 'filled' | 'ring' | 'ghost' | 'ring-warning' | 'ring-primary' =
-		'filled'
-	export let background: string = 'bg-primary-500'
-	export let ring: string = 'ring-transparent'
-	export let color: string = 'text-white'
-	export let weight: string = 'ring-none'
-	export let rounded: string = 'rounded-lg'
-	export let width: string = 'w-auto'
-	export let customClass: string = ''
-	export let disabled: boolean = false
-	export let type = 'button'
+	export let size: OwnProps['size'] = 'base'
+	export let background: OwnProps['background'] = 'primary'
+	export let color: OwnProps['color'] = 'text-white'
+	export let iconPosition: OwnProps['iconPosition'] = 'left'
+	export let icon: OwnProps['icon'] = undefined
+	export let variant: OwnProps['variant'] = 'filled'
 </script>
 
-<Button
-	class={customClass}
-	{size}
-	{background}
-	{color}
-	{ring}
-	{weight}
-	{rounded}
-	{width}
-	{disabled}
-	{type}
-	{variant}
->
-	<svelte:fragment slot="lead">
-		{#if icon}
+{#if $$restProps.href}
+	<a
+		{...$$restProps}
+		href={$$restProps.href}
+		class={`btn btn-${size} ${
+			background === 'none' ? '' : `btn-${variant}-${background}`
+		} ${color} ${$$restProps.class ?? ''}`}
+	>
+		{#if icon && iconPosition === 'left'}
 			<Icon {icon} />
 		{/if}
-	</svelte:fragment>
-	<slot />
-</Button>
+		<slot />
+		{#if icon && iconPosition === 'left'}
+			<Icon {icon} />
+		{/if}
+	</a>
+{:else}
+	<button
+		{...$$restProps}
+		class={`btn btn-${size} ${
+			background === 'none' ? '' : `btn-${variant}-${background}`
+		} ${color} ${$$restProps.class ?? ''}`}
+	>
+		{#if icon && iconPosition === 'left'}
+			<Icon {icon} />
+		{/if}
+		<slot />
+		{#if icon && iconPosition === 'left'}
+			<Icon {icon} />
+		{/if}
+	</button>
+{/if}

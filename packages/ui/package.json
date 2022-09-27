@@ -8,18 +8,19 @@
 	"type": "module",
 	"main": "index.js",
 	"svelte": "index.js",
+	"types": "index.ts",
 	"dependencies": {
 		"@devmoon/metadata": "workspace:^0.2.0",
 		"svrollbar": "^0.12.0"
 	},
 	"devDependencies": {
-		"svelte-inview": "^3.0.1",
-		"@brainandbones/skeleton": "^0.37.32",
+		"@brainandbones/skeleton": "^0.41.49",
 		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"svelte": "^3.44.0",
 		"svelte-awesome": "^3.0.0",
 		"svelte-formula": "^0.12.0",
 		"svelte-gestures": "^1.4.1",
+		"svelte-inview": "^3.0.1",
 		"svelte-modals": "^1.2.0",
 		"svelte-paginate": "^0.0.1",
 		"svelte-table": "^0.5.1",
