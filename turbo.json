@@ -1,0 +1,28 @@
+{
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["build/**", ".vercel_build_output/**", ".svelte-kit/**"],
+			"inputs": [
+				"src/**/*.{html,js,svelte,svx,ts}",
+				"../../packages/ui/**/*.{html,js,svelte,svx,ts}"
+			]
+		},
+		"lint": {
+			"outputs": []
+		},
+		"test": {
+			"outputs": ["coverage/**"],
+			"dependsOn": []
+		},
+		"dev": {
+			"cache": false
+		},
+		"preview": {
+			"cache": true
+		},
+		"package": {
+			"outputs": ["package"]
+		}
+	}
+}

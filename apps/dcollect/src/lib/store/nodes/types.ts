@@ -1,4 +1,4 @@
-import type { IReactiveFormBuilder } from '@devmoon/ui'
+import type { IReactiveFormBuilder } from '@devmoon/components'
 
 export interface IInitialState {
 	loading: 'idle' | 'pending' | 'succeeded' | 'failed'

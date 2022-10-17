@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
 	import { goto } from '$app/navigation'
-	import { Drawer, DrawerSide, Logo, Navbar, Sidebar } from '@devmoon/ui'
+	import { Drawer, DrawerSide, Logo, Navbar, Sidebar } from '@devmoon/components'
 	// import '../../../theme.css';
 	import '../../../app.css'
 

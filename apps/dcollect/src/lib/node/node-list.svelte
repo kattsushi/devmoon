@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Divider, Icon, Menu, MenuItem, Modal, SearchBar } from '@devmoon/ui'
+	import { Divider, Icon, Menu, MenuItem, Modal, SearchBar } from '@devmoon/components'
 
 	import { closeModal, Modals, openModal } from 'svelte-modals'
 	import folderO from 'svelte-awesome/icons/folderO'

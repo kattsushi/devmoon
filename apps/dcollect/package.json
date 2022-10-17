@@ -54,7 +54,6 @@
 	"dependencies": {
 		"@devmoon/config": "workspace:*",
 		"@devmoon/metadata": "workspace:*",
-		"@devmoon/ui": "workspace:*",
 		"@fontsource/fira-mono": "^4.5.9",
 		"@prisma/client": "^4.3.1",
 		"@trpc/client": "10.0.0-alpha.48",
@@ -62,6 +61,7 @@
 		"gun": "0.2020.1237",
 		"trpc-sveltekit": "^2.3.4",
 		"trpc-transformer": "^2.1.2",
-		"zod": "^3.19.1"
+		"zod": "^3.19.1",
+		"@devmoon/components": "workspace:*"
 	}
 }

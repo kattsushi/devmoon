@@ -1,0 +1,20 @@
+{
+	"name": "@devmoon/components",
+	"version": "0.2.0",
+	"type": "module",
+	"main": "index.js",
+	"svelte": "index.js",
+	"types": "index.ts",
+	"dependencies": {
+		"@devmoon/metadata": "workspace:^0.2.0",
+		"svrollbar": "^0.12.0"
+	},
+	"devDependencies": {
+		"svelte-inview": "^3.0.1",
+		"svelte-awesome": "^3.0.0",
+		"svelte-formula": "^0.12.0",
+		"svelte-gestures": "^1.4.1",
+		"theme-change": "^2.2.0",
+		"svelte-paginate": "^0.0.1"
+	}
+}

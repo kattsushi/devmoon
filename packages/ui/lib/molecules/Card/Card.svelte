@@ -1,24 +1,16 @@
 <script lang="ts">
-	import { Card } from '@brainandbones/skeleton'
-	export let background: string = 'bg-base-100'
-	// export let color: string = 'text-white';
-	export let customClass: string = ''
-	export let withShadow = false
-	export let color = 'text-white'
+	type OwnProps = {
+		background: string
+		withShadow: boolean
+		color: string
+	}
+	type $$Props = svelteHTML.IntrinsicElements['div'] & OwnProps
+
+	export let background: OwnProps['background'] = 'bg-base-100'
+	export let withShadow: OwnProps['withShadow'] = false
+	// export let color = 'text-white'
 </script>
 
-<Card {background} {color} class={customClass}>
+<div class={`card card-body ${withShadow ? 'shadow-2xl' : ''} !${background}`}>
 	<slot />
-</Card>
-
-<!-- <div class={`card w-full ${withShadow ? 'shadow-2xl' : ''} ${background} ${customClass}`}>
-	<div class="card-body">
-		<slot />
-	</div>
-</div> -->
-<!-- 
-<style>
-	.card {
-		pointer-events: auto;
-	}
-</style> -->
+</div>

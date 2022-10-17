@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navbar, SearchBar } from '@devmoon/ui'
+	import { Navbar, SearchBar } from '@devmoon/components'
 
 	export const id: string = 'node-detail'
 </script>

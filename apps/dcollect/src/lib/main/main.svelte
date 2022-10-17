@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ReactiveForm, type IReactiveFormBuilder } from '@devmoon/ui'
+	import { ReactiveForm, type IReactiveFormBuilder } from '@devmoon/components'
 	import textHeight from 'svelte-awesome/icons/textHeight'
 	import hashtag from 'svelte-awesome/icons/hashtag'
 	import calendar from 'svelte-awesome/icons/calendar'

@@ -4,7 +4,7 @@ import type { IFormConfigProperty, INode, IProperty } from './types'
 import type { LoadingState } from '../common.types'
 import { createNode } from './services/node'
 import { defaultFields, defaultProperty, numberFields, textFields } from './services/data'
-import type { IReactiveFormBuilder } from '@devmoon/ui'
+import type { IReactiveFormBuilder } from '@devmoon/components'
 
 class NodeStore {
 	constructor(

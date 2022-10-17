@@ -3,7 +3,7 @@
 	import { Subject, scheduled, asyncScheduler, Subscription } from 'rxjs'
 	import { filter, debounceTime, distinctUntilChanged, map } from 'rxjs/operators'
 
-	import { ReactiveForm } from '@devmoon/ui'
+	import { ReactiveForm } from '@devmoon/components'
 	import { defaultFields, numberFields, textFields } from '$lib/store/nodes/services/data'
 	import type { IProperty } from '$lib/store/nodes/types'
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import folderO from 'svelte-awesome/icons/folderO'
 	import { closeModal } from 'svelte-modals'
-	import { ReactiveForm, Icon, Modal, type IReactiveFormBuilder } from '@devmoon/ui'
+	import { ReactiveForm, Icon, Modal, type IReactiveFormBuilder } from '@devmoon/components'
 	import { nodeStore } from '$lib/store/nodes'
 	import { defaultFields, NodeFormFields, textFields } from '$lib/store/nodes/services/data'
 	import { min } from 'rxjs'

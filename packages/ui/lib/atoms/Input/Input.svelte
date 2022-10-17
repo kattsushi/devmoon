@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
 	type OwnProps = {
 		error: boolean
 	}
@@ -18,6 +17,7 @@
 </script>
 
 <input {...$$restProps} use:ref bind:value class:!input-error={error} />
+<h1>hola mundo</h1>
 {#if $$restProps.type === 'checkbox'}
 	<label class="relative -bottom-5" for={$$restProps.name}>{$$restProps.placeholder}</label>
 {/if}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { themeChange } from 'theme-change'
-	import { Background, Hero } from '@devmoon/ui'
+	import { Background, Hero } from '@devmoon/components'
 	import { authStore } from '$lib/store/auth'
 	import { goto } from '$app/navigation'
 	import { onMount } from 'svelte'

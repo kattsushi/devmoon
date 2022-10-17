@@ -3,7 +3,7 @@
 	import '../../../../app.css'
 	import { page } from '$app/stores'
 	import NodeList from '$lib/node/node-list.svelte'
-	import { Divider } from '@devmoon/ui'
+	import { Divider } from '@devmoon/components'
 
 	import { Modals, closeModal } from 'svelte-modals'
 

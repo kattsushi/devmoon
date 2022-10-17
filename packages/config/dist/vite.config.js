@@ -23,18 +23,11 @@ const config = {
 	plugins: [sveltekit()],
 	vite: {
 		ssr: {
-			noExternal: [
-				'@fortawesome/fontawesome-svg-core',
-				'svelte-fa',
-				'daisyui',
-				'gun',
-				'svelte-viewport-info'
-			]
+			noExternal: Object.keys(pkg.dependencies || {})
 		},
 		optimizeDeps: {
 			include: [
 				'@fortawesome/fontawesome-svg-core',
-				'svelte-fa',
 				'gun',
 				'svelte-viewport-info',
 				'gun/gun',

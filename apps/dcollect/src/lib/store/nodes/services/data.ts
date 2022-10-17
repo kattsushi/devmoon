@@ -1,4 +1,4 @@
-import type { IField } from '@devmoon/ui/src/components/molecules/reactive-form/reactive-form.types'
+import type { IField } from '@devmoon/components/src/components/molecules/reactive-form/reactive-form.types'
 import type { IProperty } from '../types'
 
 import textHeight from 'svelte-awesome/icons/textHeight'

@@ -2,7 +2,7 @@
 	"dependencies": {
 		"@devmoon/config": "workspace:*",
 		"@devmoon/metadata": "workspace:*",
-		"@devmoon/ui": "workspace:*",
+		"@devmoon/components": "workspace:*",
 		"@fontsource/fira-mono": "^4.5.9",
 		"@prisma/client": "^4.3.1",
 		"@trpc/client": "10.0.0-alpha.48",
