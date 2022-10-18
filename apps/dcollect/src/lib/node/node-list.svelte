@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Divider, Icon, Menu, MenuItem, Modal, SearchBar } from '@devmoon/components'
+	import { Divider, Icon, Menu, MenuItem, Modal } from '@devmoon/components'
 
 	import { closeModal, Modals, openModal } from 'svelte-modals'
 	import folderO from 'svelte-awesome/icons/folderO'
@@ -17,8 +17,6 @@
 
 <!-- <Breadcrumb path={page.url.pathname.split('/').slice(1)} /> -->
 <div class="flex w-full flex-col p-3">
-	<SearchBar />
-
 	<Divider isHorizontal={true} />
 
 	<Menu>

@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 const config = {
 	content: [
-		'../../packages/ui/**/*.{html,js,svelte,svx,ts}',
+		'../../packages/components/**/*.{html,js,svelte,svx,ts}',
 		'./src/**/*.{html,js,svelte,svx,ts}',
 		'./node_modules/@brainandbones/skeleton/**/*.{html,js,svelte,ts}'
 	],
