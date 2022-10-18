@@ -45,6 +45,7 @@
 
 	function onSubmit(data: any) {
 		const { values, valid } = data.detail
+		console.log({ values, valid })
 		if (valid) {
 			const then = (res: any) => {
 				goto(`/admin/dashboard`, { replaceState: true })

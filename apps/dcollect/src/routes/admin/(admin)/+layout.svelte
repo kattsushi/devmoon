@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation'
 	import { Drawer, DrawerSide, Logo, Navbar, Sidebar } from '@devmoon/components'
 	// import '../../../theme.css';
-	import '../../../app.css'
+	import '../../../app.postcss'
 
 	import thLarge from 'svelte-awesome/icons/thLarge'
 	import connectdevelop from 'svelte-awesome/icons/connectdevelop'
@@ -13,11 +13,11 @@
 
 	const { isLoggedIn } = authStore
 	onMount(() => {
-		authStore.setCurrentUser(() => {
-			if (!$isLoggedIn) {
-				goto('/')
-			}
-		})
+		// authStore.setCurrentUser(() => {
+		// 	if (!$isLoggedIn) {
+		// 		goto('/')
+		// 	}
+		// })
 	})
 
 	function handleLogout() {

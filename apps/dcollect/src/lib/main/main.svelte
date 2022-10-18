@@ -106,21 +106,12 @@
 			}
 		],
 		formName: 'test',
-		size: 'md',
-		groupsFormsOptions: [
-			{
-				name: 'group1',
-				label: 'Group 1',
-				layout: 'row'
-			}
-		]
+		size: 'md'
 	}
 
 	const handleSubmit = (data: any) => {
 		console.log('handleSubmit', data.detail)
 	}
 </script>
-
-<h1 class="bg-inherit text-center text-lg text-cyan-600">hello testing forms</h1>
 
 <ReactiveForm debug={true} hasCancelButton={true} {formBuilder} on:onSubmit={handleSubmit} />

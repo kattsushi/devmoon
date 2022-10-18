@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import '../../../../theme.css';
-	import '../../../../app.css'
+	// import '../../../../app.css'
 	import { page } from '$app/stores'
 	import NodeList from '$lib/node/node-list.svelte'
 	import { Divider } from '@devmoon/components'

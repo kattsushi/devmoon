@@ -64,6 +64,7 @@
 	let fieldValidators = {}
 	let fieldMessage = {}
 	const onSubmit = ev => {
+		console.log('onSubmit', get(formValues))
 		dispatch('onSubmit', {
 			values: get(formValues),
 			multi: get(formsValues),

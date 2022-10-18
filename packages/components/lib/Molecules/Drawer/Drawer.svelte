@@ -15,7 +15,7 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div class="drawer">
+<div class="h-full">
 	<input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />
 	<div class="drawer-content flex h-full flex-col pl-0 pr-0 pb-0">
 		<div class="mb-4 flex h-full flex-row">

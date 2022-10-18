@@ -4,6 +4,8 @@
 		"@devmoon/metadata": "workspace:*",
 		"@devmoon/components": "workspace:*",
 		"@fontsource/fira-mono": "^4.5.9",
+		"@brainandbones/skeleton": "^0.50.6",
+		"svelte-modals": "^1.2.0",
 		"@prisma/client": "^4.3.1",
 		"@trpc/client": "10.0.0-alpha.48",
 		"@trpc/server": "10.0.0-alpha.48",

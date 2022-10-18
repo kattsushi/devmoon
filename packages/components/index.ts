@@ -10,6 +10,7 @@ export { default as Background } from './lib/Atoms/Background/Background.svelte'
 export { default as Divider } from './lib/Atoms/Divider/Divider.svelte'
 export { default as Menu } from './lib/Atoms/Menu/Menu.svelte'
 export { default as MenuItem } from './lib/Atoms/MenuItem/MenuItem.svelte'
+export { default as Navbar } from './lib/Atoms/Navbar/Navbar.svelte'
 
 // Molecules =================================================================
 export { default as Device } from './lib/Molecules/Device/Device.svelte'
@@ -21,5 +22,9 @@ export * from './lib/Molecules/ReactiveForm/ReactiveForm.types'
 export { default as Card } from './lib/Molecules/Card/Card.svelte'
 export { default as Drawer } from './lib/Molecules/Drawer/Drawer.svelte'
 export { default as DrawerSide } from './lib/Molecules/DrawerSide/DrawerSide.svelte'
+export { default as Modal } from './lib/Molecules/Modal/Modal.svelte'
+export { default as Sidebar } from './lib/Molecules/Sidebar/Sidebar.svelte'
+export { default as ToggleTheme } from './lib/Molecules/ToggleTheme/ToggleTheme.svelte'
+export { default as Hero } from './lib/Molecules/Hero/Hero.svelte'
 
 export { mediaQuery } from './lib/mediaQuery/mediaQuery.js'
