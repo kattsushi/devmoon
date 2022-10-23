@@ -28,6 +28,7 @@
 
 <div class="hidden h-full sm:flex">
 	<div class="flex-column menu bg-base-100 rounded-box h-full p-2.5 pt-2" style="width: 70px;">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div on:click|preventDefault={toogleDrawer}>
 			<Logo />
 		</div>

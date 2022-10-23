@@ -191,6 +191,7 @@
 							class:collapse-open={open}
 						>
 							<input type="checkbox" class="peer" />
+							<!-- svelte-ignore a11y-click-events-have-key-events -->
 							<div
 								on:click|preventDefault={() => {
 									open = !open

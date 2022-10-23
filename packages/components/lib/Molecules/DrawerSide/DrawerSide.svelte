@@ -18,12 +18,14 @@
 <div class="drawer-side">
 	<label for="my-drawer-3" class="drawer-overlay" />
 	<ul class="menu bg-base-100 w-80 overflow-y-auto p-3">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<li on:click={() => dispatch('onLogoClick')}>
 			<slot name="logo" />
 		</li>
 		<!-- Sidebar content here -->
 		{#each sidebarItems as { href, icon, name }}
 			<li class="mt-2">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
 					class="bordered no-underline hover:no-underline"
 					on:click|preventDefault={() => handgleNavClick(href)}
