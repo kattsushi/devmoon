@@ -1,8 +1,8 @@
-import { viteConfig } from '@devmoon/config';
+import { viteConfig } from '@devmoon/config'
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  ...viteConfig
-};
+	...viteConfig
+}
 
-export default config;
+export default config

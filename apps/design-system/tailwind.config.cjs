@@ -1,7 +1,7 @@
-const tailwindConfig = require('@devmoon/config/tailwindConfig');
+const tailwindConfig = require('@devmoon/config/tailwindConfig')
 
 const config = {
-  ...tailwindConfig
-};
+	...tailwindConfig
+}
 
-module.exports = config;
+module.exports = config

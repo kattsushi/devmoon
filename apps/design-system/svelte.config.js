@@ -1,7 +1,7 @@
-import { svelteConfig } from '@devmoon/config';
+import { svelteConfig } from '@devmoon/config'
 
 const config = {
-  ...svelteConfig
-};
+	...svelteConfig
+}
 
-export default config;
+export default config

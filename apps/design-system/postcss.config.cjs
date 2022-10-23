@@ -1,7 +1,7 @@
-const postcssConfig = require('@devmoon/config/postcssConfig');
+const postcssConfig = require('@devmoon/config/postcssConfig')
 
 const config = {
-  ...postcssConfig
-};
+	...postcssConfig
+}
 
-module.exports = config;
+module.exports = config
